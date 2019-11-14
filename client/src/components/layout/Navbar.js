@@ -19,24 +19,28 @@ showCalendar = e => {
     render() {
         
         return (
-            <div className="navbar">
+            <div class="container-fluid" id= "container1">
+                <div className="navbar">
                 <div className="navbar navbar-light bg-light">
                     <a className="navbar-brand" href="/viewpage">
                         <img src={Mansion} width="30" height="30" className="d-inline-block align-top" alt="" />
-                        Welcome 
-                    </a>
-                    <a className="navbar-brand" href="/">
-                        <img src={LogOutIcon} width="30" height="30" className="d-inline-block align-top" alt="" onClick={this.onLogoutClick}/>
-                        Logout
+                        Home
                     </a>
                     <a className="navbar-brand" href="/calendar">
                         <img src={calendarIcon} width="30" height="30" className="d-inline-block align-top" alt="" onClick={this.showCalendar}/>
                         Calendar
                     </a>
+                    <a className="navbar-brand" href="/">
+                        <img src={LogOutIcon} width="30" height="30" className="d-inline-block align-top" alt="" onClick={this.onLogoutClick}/>
+                        Logout
+                    </a>
+                    
+                    <h4>Cup o' Sugar</h4>
 
                 </div>
                 
                 
+            </div>
             </div>
         );
     }

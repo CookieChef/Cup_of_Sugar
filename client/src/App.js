@@ -16,6 +16,7 @@ import PrivateRoute from './components/private-route/PrivateRoute';
 import Dashboard from './components/dashboard/Dashboard';
 import View from './components/viewpage/View';
 import Calendar from './components/calendar/calendar';
+import Footer from './components/layout/Footer';
 
 if(localStorage.jwtToken){
     const token = localStorage.jwtToken;
@@ -46,6 +47,7 @@ class App extends Component {
                             <PrivateRoute exact path="/viewpage" component={View}/>
                             <PrivateRoute exact path="/calendar" component={Calendar}/>
                         </Switch>
+                        <Footer />
                     </div>
                 </Router>
             </Provider>

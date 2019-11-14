@@ -22,9 +22,9 @@ class Dashboard extends Component {
                 <div className="row">
                     <div className="col s12 center-align">
                         <h4>
-                            <b>Hey there,</b> {user.name.split(" ")[0]}
+                            <b>Hey there,</b> {user.name.split(" ")[0] + "!"}
                             <p className="flow-text grey-text text-darken-1">
-                                You are logged into a full-stack{" "} <span style={{ fontFamily: "monospace" }}>MERN</span> app
+                                We're so happy to see you!
                             </p>
                         </h4>
                         <button className="btn btn-large waves-effect waves-light hoverable blue accent-3" style={{
@@ -41,7 +41,7 @@ class Dashboard extends Component {
                             letterSpacing: "1.5px",
                             marginTop: "1rem"
                         }} onClick={this.onGoToClick}>
-                            Page
+                            Home
                         </button>
                     </div>
                 </div>

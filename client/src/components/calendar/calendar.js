@@ -36,16 +36,17 @@ class Event extends Component {
     
         return (
             <div className="container">
+                <h3>Enter New Event Below</h3>
                 <form>
                     <Input name="name" placeholder="Name (required)"/>
                     <Input name="place" placeholder="Place (required)"/>
                     <TextArea name="synopsis" placeholder="Synopsis (optional)"/>
                     <button className="button-lg" onClick={this.handleFormSubmit}>
-                        Submit
+                        Add
                     </button>
                 </form>
                 
-                    <h6>Upcoming events:</h6>
+                    <h3>Upcoming events:</h3>
 
 
             </div>
