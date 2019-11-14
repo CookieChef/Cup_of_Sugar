@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
   }
 
-const db = require("./config/keys").mongoURI;
+const db = process.env.mongoddb_URI || require("./config/keys").mongoURI;
 mongoose.connect(db, { useNewUrlParser: true }).then(() => console.log("MongoDB connected")).catch((err) => console.log(err));
 
 app.use(passport.initialize());
