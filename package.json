@@ -38,5 +38,11 @@
   },
   "devDependencies": {
     "nodemon": "^1.19.1"
-  }
+  },
+  "devServer": {
+    "disableHostCheck": true,
+    "host": "0.0.0.0",
+    "port": 3000
+}
+
 }
