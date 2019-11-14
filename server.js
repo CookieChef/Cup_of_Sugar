@@ -7,8 +7,11 @@ const users = require('./routes/api/users');
 const app = express();
 const port = process.env.PORT || 5000;
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static('client/build'));
-  }
+	app.use(express.static('client/build'));
+}
+app.get('*', (request, response) => {
+	response.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+});
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
