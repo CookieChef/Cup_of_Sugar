@@ -10,6 +10,9 @@ if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
   }
 
+  const routes = require("./routes");
+  app.use(routes);
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
