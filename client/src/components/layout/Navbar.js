@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Mansion from "./mansion.png";
 import LogOutIcon from "./logout.png";
 import calendarIcon from "./calendar.png";
+import chatIcon from "./conversation.png";
 
 class Navbar extends Component {
     // onLogoutClick = e => {
@@ -15,6 +16,10 @@ class Navbar extends Component {
 showCalendar = e => {
     e.preventDefaault();
     return ('/calendar')
+}
+showChat = e => {
+    e.preventDefaault();
+    return ('/chat')
 }
     render() {
         
@@ -32,6 +37,10 @@ showCalendar = e => {
                     <a className="navbar-brand" href="/calendar">
                         <img src={calendarIcon} width="30" height="30" className="d-inline-block align-top" alt="" onClick={this.showCalendar}/>
                         Calendar
+                    </a>
+                    <a className="navbar-brand" href="/chat">
+                        <img src={chatIcon} width="30" height="30" className="d-inline-block align-top" alt="" onClick={this.showChat}/>
+                        Chat
                     </a>
 
                 </div>

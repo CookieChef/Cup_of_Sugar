@@ -1,94 +1,73 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { logoutUser } from '../../actions/authActions';
-import Chatkit from '@pusher/chatkit-client';
-import MessageList from './messageList';
-import { ChatManager, TokenProvider } from '@pusher/chatkit-client'
+import ChatMessage from '../livechat/ChatMessage';
+import Signup from '../livechat/Signup';
+import ChatApp from '../livechat/ChatApp';
+import { default as Chatkit } from '@pusher/chatkit-server';
 
+const chatkit = new Chatkit({
+    instanceLocator: "v1:us1:3cf04e03-208a-4882-a440-bd452360e0cc",
+    key: "161f2ecb-65c9-46a9-ae3a-4e13d4671241:vm0d41rYs0osr6kIuAyBjYAgLXW20nJOQxoEjyCpfeg="
+})
 
-//const jwt = require('jsonwebtoken');
-
-class Chat extends Component {
-   
-    constructor () {
-        super()
+class ChatDisplay extends Component {
+    constructor(props) {
+        super(props);
         this.state = {
-            messages: []
+            currentUsername: '',
+            currentId: '',
+            currentView: 'signup'
         }
+        this.changeView = this.changeView.bind(this);
+        this.createUser = this.createUser.bind(this);
     }
-
-    componentDidMount() {
-
-        const chatManager = new ChatManager ({
-            instanceLocator: 'v1:us1:3cf04e03-208a-4882-a440-bd452360e0cc',
-            userId: "Sara",
-            tokenProvider: new Chatkit.TokenProvider ({
-                
-            url:'jsonwebtoken'
-            }),
-        });
-    chatManager
-        .connect ()
-        .then(SET_CURRENT_USER => {
-            return SET_CURRENT_USER.subscribeToRoom ({
-                roomId: '2a28ca3d-2a2a-447c-adfb-ca75e8af3a5e',
-                messageLimit: 100,
-                hooks: {
-                    onNewMessage: message => {
-                        this.setState({
-                            messages: [...this.state.messages, message]
-                        })
-                    }
-                }
-            })
+    createUser(username) {
+        chatkit.createUser({
+            id: username,
+            name: username,
         })
-        .then(currentRoom => {})
-        .catch(error => console.log(error))
-            
-        }
-        
+        .then((currentUser) => {
+            this.setState({
+                currentUsername: username,
+                currentId: username,
+                currentView: 'chatApp'
+            })
+        }).catch((err) => {
+                 if(err.status === 400) {
+                this.setState({
+                    currentUsername: username,
+                    currentId: username,
+                    currentView: 'chatApp'
+                })
+            } else {
+                console.log(err.status);
+            }
+        });
+    }
+    changeView(view) {
+        this.setState({
+            currentView: view
+        })
+    }
     render() {
+        let view = '';
 
-
+        if (this.state.currentView === "ChatMessage") {
+          view = <ChatMessage changeView={this.changeView} />
+        } else if (this.state.currentView === "signup") {
+          view = <Signup onSubmit={this.createUser} />
+        } else if (this.state.currentView === "chatApp") {
+          view = <ChatApp currentId={this.state.currentId} />
+        }
         return (
-            <div>
-                {/* <UsernameForm/> */}
-                <h1>Chat</h1>
-                <MessageList messages={this.state.messages}/>
+            <div className="container">
+                 {view}
             </div>
+                
         );
     }
 }
 
-Chat.propTypes = {
-    logoutUser: PropTypes.func.isRequired,
-    auth: PropTypes.object.isRequired
-};
-
-const mapStateToProps = state => ({ auth: state.auth });
-
-export default connect(mapStateToProps, { logoutUser })(Chat);
-
-// import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
 
 
 
-
-// class Chat extends Component {
-
-
-//     render () {
-//         const { user } = this.props.auth;
-//         return <div>
-//             <p> your user name is:{user.name} </p>
-//         </div>
-//     }
-// }
-//     Chat.propTypes = {
-//         logoutUser: PropTypes.func.isRequired,
-//         auth: PropTypes.object.isRequired
-// }
-
-// export default Chat;
+export default ChatDisplay;
