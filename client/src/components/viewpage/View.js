@@ -9,27 +9,34 @@ import { logoutUser } from '../../actions/authActions';
 class ViewDisplay extends Component {
     onLogoutClick = e => {
         e.preventDefault();
-        this.props.logoutUser();  
+        this.props.logoutUser();
     }
 
     render() {
-       
+
 
         return (
 
             <div className="container valign-wrapper" style={{ height: "75vh" }}>
                 <div className="row">
-                    <div className="col">
+                    <div className="col-fluid">
                         <h1>
                             you are in the page!!
                         </h1>
-                       
+
                     </div>
-                    <div className="col">
+                    <div className="col-fluid">
                         <p>
-                        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+                            “Mounting evidence suggests that there are social, health, and economic consequences to isolated and sedentary lifestyles. Unfortunately, the physical and social construct of the urban environment promotes isolation. Higher rates of television viewing, increased computer usage, concern about crime, little contact with neighbors and geographic isolation have created communities that are not interconnected. This isolation may result in a lack of social networks and diminished social capital, which can contribute to obesity, cardiovascular disease, mental health problems, and increased rates of mortality.”
+    
+                        <br></br>
+                        <br></br>
+                            Shobha Srinivasan, PhD, Liam R. O’Fallon, MA, and Allen Dearry, PhD
+                        <br></br>
+                        <br></br>
+                            -American Public Health Association
                         </p>
-                       
+
                     </div>
                 </div>
             </div>
