@@ -1,3 +1,71 @@
+
+body {
+    background-color: rgb(231, 212, 191);
+    /* font-family: 'Lateef', cursive; */
+    /* font-size: 25px; */
+}
+h1 {
+    font-family: 'Baloo', cursive;
+    color: rgb(30, 131, 131);
+    text-shadow: black, rgb(0, 0, 0)
+}
+h3 {
+    font-family: 'Baloo', cursive;
+    color: rgb(30, 131, 131);
+    text-shadow: black, rgb(0, 0, 0)
+}
+h4 {
+    font-family: 'Baloo', cursive;
+    color: rgb(209, 112, 33);
+    text-shadow: black, rgb(0, 0, 0);
+}
+#signup {
+  border: 5px solid rgb(209, 112, 33);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+.container {
+    font-family: 'Titan One', cursive;
+}
+#container1 {
+    background-color: black;
+    text-align: center;
+    align-content: center;
+}
+#copyright {
+    border-top: 1px solid black;
+}
+.col {
+    align-content: center;
+    text-align: center;
+}
+#colFollow {
+    border-left: 5px solid black;
+}
+.event-form2 {
+    border: 5px solid rgb(209, 112, 33);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+.event-form1 {
+    border: 5px solid rgb(30, 131, 131);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+.button-lg {
+    font-family: 'Titan One', cursive;
+    font-size: 30px;
+    background-color: black;
+    color: rgb(255, 255, 255);
+}
+/* font-family: 'Baloo', cursive;
+font-family: 'Boogaloo', cursive;
+font-family: 'Lateef', cursive;
+font-family: 'Titan One', cursive; */
+
 /* .App {
     text-align: center;
   }
@@ -26,3 +94,4 @@
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
   } */
+
