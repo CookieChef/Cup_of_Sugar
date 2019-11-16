@@ -29,18 +29,16 @@ class Navbar extends Component {
                         <div className="row">
                             {/* Cup o' Sugar Icon */}
                             <div className="col">
-                                <a className="navbar-brand" href="/viewpage">
-                                    <img src={sugar} width="150" height="150" className="d-inline-block align-top" alt="" />
-                                </a>
+                                    <img src={sugar} id="sugar-bowl" width="200" height="200" className="d-inline-block align-top" alt="" />
                                 <h3><u>Cup o' Sugar</u></h3>
                             </div>
 
                             {/* Quote */}
-                            <div className="col">
+                            <div className="col" id="col-quote">
                                 <br></br>
                                 <p>"There is no power for greater change than a community discovering what it cares about" - Margaret J. Wheatley</p>
 
-                                <h4>641.780.5076</h4>
+                                <h4 id="phone">800.784.5276</h4>
 
                                 <h4>contact@cup'osugar.com</h4>
 

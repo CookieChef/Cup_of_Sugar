@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logoutUser } from '../../actions/authActions';
-//import  Calendar  from '../calendar/calendar';
+// import  Calendar  from '../calendar/calendar';
 
 
 
@@ -20,9 +20,7 @@ class ViewDisplay extends Component {
             <div className="container valign-wrapper" style={{ height: "75vh" }}>
                 <div className="row">
                     <div className="col-fluid">
-                        <h1>
-                            you are in the page!!
-                        </h1>
+                        <h1><u>We Connect Communities</u></h1>
 
                     </div>
                     <div className="col-fluid">

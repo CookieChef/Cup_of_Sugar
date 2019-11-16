@@ -11,6 +11,7 @@ class Event extends Component {
    
     state = {
         name: "",
+        photo: "",
         place: "",
         synopsis: ""
     }
@@ -24,6 +25,7 @@ class Event extends Component {
 
             const newEvent = {
                 name: this.state.name,
+                photo: this.state.photo,
                 place:this.state.place,
                 synopsis: this.state.synopsis
             };
@@ -48,18 +50,19 @@ class Event extends Component {
     
         return (
             <div className="container">
-                <h3><u>Share A New Event</u></h3>
-                <h4>Give us the scoop on the coolest parties coming up</h4>
+                <h3><u>Post an Item for Sale</u></h3>
+                <h4>Earn some extra cash by selling your gently used items</h4>
                 <form>
-                    <Input name="name" value={this.state.name} placeholder="Name (required)" onChange= {this.handleInputChange}/>
-                    <Input name="place" value={this.state.place} placeholder="Place (required)" onChange= {this.handleInputChange}/>
-                    <TextArea name="synopsis" value={this.state.synopsis} placeholder="Synopsis (optional)" onChange= {this.handleInputChange}/>
+                    <Input name="name" value={this.state.name} placeholder="Item Name (required)" onChange= {this.handleInputChange}/>
+                    <Input name="photo" value={this.state.name} placeholder="Photo (optional)" onChange= {this.handleInputChange}/>
+                    <Input name="place" value={this.state.place} placeholder="Price (required)" onChange= {this.handleInputChange}/>
+                    <TextArea name="synopsis" value={this.state.synopsis} placeholder="Description (optional)" onChange= {this.handleInputChange}/>
                     <button className="button-lg" onClick={this.handleFormSubmit}>
-                        Add
+                        Post
                     </button>
                 </form>
                 
-                    <h3>Upcoming events:</h3>
+                    <h3>Items for Sale:</h3>
 
 
             </div>
