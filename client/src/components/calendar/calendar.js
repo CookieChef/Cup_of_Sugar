@@ -15,6 +15,11 @@ class Event extends Component {
         synopsis: ""
     }
         
+<<<<<<< HEAD
+=======
+    
+    
+>>>>>>> c37df748f299055fd4516409dae049476c7ba11b
 
         handleFormSubmit = event => {
             event.preventDefault();
@@ -72,4 +77,4 @@ Event.propTypes = {
 
 // const mapStateToProps = state => ({ auth: state.auth });
 
-export default Event;
+export default Event; 
