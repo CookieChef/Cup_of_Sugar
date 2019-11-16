@@ -16,6 +16,10 @@ import PrivateRoute from './components/private-route/PrivateRoute';
 import Dashboard from './components/dashboard/Dashboard';
 import View from './components/viewpage/View';
 import Calendar from './components/calendar/calendar';
+import Profile from './components/profile/profile';
+import Blog from './components/blog/blog';
+import Sos from './components/sos/sos';
+import Item from './components/item/item';
 
 import Footer from './components/layout/Footer';
 
@@ -59,6 +63,10 @@ class App extends Component {
                             <PrivateRoute exact path="/viewpage" component={View} />
                             <PrivateRoute exact path="/calendar" component={Calendar} />
                             <PrivateRoute exact path="/chat" component={ChatDisplay} />
+                            <PrivateRoute exact path="/profile" component={Profile} />
+                            <PrivateRoute exact path="/blog" component={Blog} />
+                            <PrivateRoute exact path="/sos" component={Sos} />
+                            <PrivateRoute exact path="/item" component={Item} />
                         </Switch>
                         <Footer />
                     </div>

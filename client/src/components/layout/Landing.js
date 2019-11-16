@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import community from "./community.jpg";
 import friendship from "./friendship.jpg";
 import togetherness from "./togetherness.jpg";
 // import { Gallery, GalleryImage } from "react-gesture-gallery";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import millennial from "./millennial.png";
 
 const images = [{community}, {friendship}, {togetherness}];
 
@@ -13,10 +16,8 @@ class Landing extends Component {
         return (
             <div className="container valign-wrapper" style={{ height: "75vh" }}>
                 <div className="row">
-                    <div className="col s12 center-align">
-                        <h4>
-                            Welcome to Cup o' Sugar!
-                        </h4>
+                    <div className="col s10 center-align">
+                        <h2><u>Welcome to Cup o' Sugar!</u></h2>
 
                         <br />
                         <div className="col s6">
@@ -43,6 +44,7 @@ class Landing extends Component {
 
                 <div className="row">
                     <div className="col s12 center-align">
+                        <img src={millennial} id="friendship" width="100%" height="100%" className="d-inline-block align-top" alt="" onClick={this.onLogoutClick}/>
                     
                     </div>
 

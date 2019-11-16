@@ -1,18 +1,24 @@
 
 body {
     background-color: rgb(231, 212, 191);
-    /* font-family: 'Lateef', cursive; */
-    /* font-size: 25px; */
+    font-family: 'Lateef', cursive;
+    font-size: 25px;
 }
 h1 {
     font-family: 'Baloo', cursive;
     color: rgb(30, 131, 131);
-    text-shadow: black, rgb(0, 0, 0)
+    text-shadow: black, rgb(0, 0, 0);
+    margin-left: 5px;
+}
+h2 {
+    font-family: 'Baloo', cursive;
+    color: rgb(209, 112, 33);
+    text-shadow: black, rgb(0, 0, 0);
 }
 h3 {
     font-family: 'Baloo', cursive;
     color: rgb(30, 131, 131);
-    text-shadow: black, rgb(0, 0, 0)
+    text-shadow: black, rgb(0, 0, 0);
 }
 h4 {
     font-family: 'Baloo', cursive;
@@ -30,18 +36,24 @@ h4 {
 }
 #container1 {
     background-color: black;
-    text-align: center;
     align-content: center;
 }
 #copyright {
     border-top: 1px solid black;
 }
+
 .col {
     align-content: center;
     text-align: center;
 }
 #colFollow {
     border-left: 5px solid black;
+}
+#col-quote {
+    border-left: 5px solid black;
+}
+.col-fluid {
+    font-size: 20px;
 }
 .event-form2 {
     border: 5px solid rgb(209, 112, 33);
@@ -61,37 +73,29 @@ h4 {
     background-color: black;
     color: rgb(255, 255, 255);
 }
+#phone {
+    color: rgb(30, 131, 131);
+}
+.navbar-brand {
+    border: 5px solid rgb(185, 127, 88);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    font-family: 'Lateef', cursive;
+    font-size: 25px;
+}
+#friendship {
+    border: 5px solid rgb(185, 127, 88);
+    border-radius: 5px;
+}
+#sugar-bowl {
+    border: 5px solid rgb(185, 127, 88);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    background-color: rgb(231, 212, 191);
+}
 /* font-family: 'Baloo', cursive;
 font-family: 'Boogaloo', cursive;
 font-family: 'Lateef', cursive;
 font-family: 'Titan One', cursive; */
-
-/* .App {
-    text-align: center;
-  }
-  
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-    height: 80px;
-  }
-  
-  .App-header {
-    background-color: #222;
-    height: 150px;
-    padding: 20px;
-    color: white;
-  }
-  
-  .App-title {
-    font-size: 1.5em;
-  }
-  
-  .App-intro {
-    font-size: large;
-  }
-  
-  @keyframes App-logo-spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  } */
-
