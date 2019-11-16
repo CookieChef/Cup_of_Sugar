@@ -8,7 +8,12 @@ import { Input, TextArea} from "../Form/index";
 // import { listEvents } from './index';
 
 class Event extends Component {
-        
+   
+    state = {
+        name: "",
+        place: "",
+        synopsis: ""
+    }
         
     
     
@@ -31,6 +36,13 @@ class Event extends Component {
             // })
             
         };
+
+        handleInputChange = event => {
+            this.setState ({
+                [event.target.name]:
+                event.target.value
+            });
+        }
         
     render() {
     
@@ -38,9 +50,9 @@ class Event extends Component {
             <div className="container">
                 <h3>Enter New Event Below</h3>
                 <form>
-                    <Input name="name" placeholder="Name (required)"/>
-                    <Input name="place" placeholder="Place (required)"/>
-                    <TextArea name="synopsis" placeholder="Synopsis (optional)"/>
+                    <Input name="name" value={this.state.name} placeholder="Name (required)" onChange= {this.handleInputChange}/>
+                    <Input name="place" value={this.state.place} placeholder="Place (required)" onChange= {this.handleInputChange}/>
+                    <TextArea name="synopsis" value={this.state.synopsis} placeholder="Synopsis (optional)" onChange= {this.handleInputChange}/>
                     <button className="button-lg" onClick={this.handleFormSubmit}>
                         Add
                     </button>
@@ -62,4 +74,4 @@ Event.propTypes = {
 
 // const mapStateToProps = state => ({ auth: state.auth });
 
-export default Event;
+export default Event; 
