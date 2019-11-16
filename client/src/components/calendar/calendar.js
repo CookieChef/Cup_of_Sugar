@@ -15,8 +15,6 @@ class Event extends Component {
         synopsis: ""
     }
         
-    
-    
 
         handleFormSubmit = event => {
             event.preventDefault();
