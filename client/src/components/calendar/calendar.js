@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Input, TextArea} from "../Form/index";
-
-//const db = require("./keys").mongoURI;
-
+//import Axios from 'axios';
 
 // import { listEvents } from './index';
+//const db = process.env.mongoddb_URI || require("./keys").mongoURI;
 
 class Event extends Component {
    
@@ -14,10 +13,6 @@ class Event extends Component {
         place: "",
         synopsis: ""
     }
-        
-    
-    
-
         handleFormSubmit = event => {
             event.preventDefault();
             console.log("ok");
@@ -28,7 +23,7 @@ class Event extends Component {
                 synopsis: this.state.synopsis
             };
             console.log(newEvent);
-
+            
             // db.Event.create({
             //     name: req.body.name,
             //     place: req.body.place,
@@ -59,7 +54,10 @@ class Event extends Component {
                 </form>
                 
                     <h3>Upcoming events:</h3>
-
+                                       
+                    <p>{this.state.name}</p>
+                    <p>{this.state.place}</p>
+                    <p>{this.state.synopsis}</p>
 
             </div>
             
